@@ -1,0 +1,4 @@
+scenario,description,expected_impact,impact_uncertainty,policy_intensity,conditions
+aggressive_tax_cut,Aggressive tax cuts during economic downturn,0.0036880482881989545,0.00011091392343099032,1.5,"{'GDP_Growth': np.float64(0.3284402752161325), 'Unemployment': np.float64(4.7), 'Inflation': np.float64(1.38653148083891)}"
+moderate_tax_cut,Moderate tax cuts during stable conditions,0.002458698858799303,0.00011091392343099045,1.0,"{'GDP_Growth': np.float64(0.3284402752161325), 'Unemployment': np.float64(3.7), 'Inflation': np.float64(1.88653148083891)}"
+targeted_relief,Targeted relief for high-unemployment periods,0.0019052467214352956,0.0001273743245032021,0.8,"{'GDP_Growth': np.float64(-0.6715597247838675), 'Unemployment': np.float64(5.7), 'Inflation': np.float64(1.88653148083891)}"

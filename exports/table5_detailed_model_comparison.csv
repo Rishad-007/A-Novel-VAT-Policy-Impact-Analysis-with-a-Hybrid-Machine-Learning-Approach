@@ -1,0 +1,9 @@
+Aspect,LSTM,Double_ML,Causal_Forest,Hybrid_Ensemble
+Primary Purpose,Time series forecasting,Causal effect estimation,Heterogeneous effects,Integrated policy analysis
+Model Type,Deep neural network,Semi-parametric ML,Tree-based ensemble,Weighted combination
+Data Requirements,Sequential time series data,"Treatment, outcome, confounders",Similar to DML,All above data sources
+Key Strength,Captures temporal dependencies,Robust causal inference,Discovers effect heterogeneity,Combines multiple perspectives
+Key Limitation,"Black box, needs large data",Assumes unconfoundedness,Requires large sample size,Complex interpretation
+Output Type,Point forecasts with sequences,Average treatment effects,Individual treatment effects,Comprehensive policy analysis
+Uncertainty Quantification,Prediction intervals,Confidence intervals,Individual confidence intervals,Multi-source uncertainty
+Policy Relevance,Economic scenario planning,Policy impact assessment,Targeted policy design,Robust policy recommendations

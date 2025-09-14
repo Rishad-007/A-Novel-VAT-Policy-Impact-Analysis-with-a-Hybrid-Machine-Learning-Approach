@@ -1,0 +1,5 @@
+Model,Primary_Purpose,Key_Metric,Confidence_Interval
+LSTM,Time Series Forecasting,Training Loss: 0.036329,Bootstrap CI (Training)
+Double ML,Causal Effect Estimation,ATE: -0.038398,"[-0.075808, -0.000988]"
+Causal Forest,Heterogeneous Effects,Mean Effect: 0.002458,Individual CIs calculated
+Hybrid Ensemble,Integrated Policy Analysis,"Ensemble Weight Distribution: [0.00995890830891465, 0.004792518870215937, 0.9852485728208693]",Prediction Intervals

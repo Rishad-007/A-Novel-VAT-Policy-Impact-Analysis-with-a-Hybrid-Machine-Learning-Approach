@@ -1,0 +1,5 @@
+Policy_Scenario,Average_Impact,Maximum_Impact,Average_Uncertainty,Impact_Significance
+Moderate Tax Cut,0.000045,0.000045,0.020707,Not Significant
+Aggressive Tax Cut,0.000112,0.000112,0.023707,Not Significant
+Phased Tax Cut,0.000027,0.000067,0.019907,Not Significant
+Tax Increase,-0.000067,-0.000067,0.021707,Not Significant
