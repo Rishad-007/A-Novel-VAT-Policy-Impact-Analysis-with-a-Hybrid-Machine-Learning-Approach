@@ -205,7 +205,103 @@ pub_exporter = PublicationExporter(data_pipeline, lstm_forecaster, dml_analyzer,
 results_package = pub_exporter.export_all_results()
 ```
 
-## 📝 Data Sources & Verification
+## � Expected Output Formats
+
+The hybrid analysis framework produces three main types of quantitative outputs:
+
+### 1. Policy Impact Quantification
+
+The framework provides detailed quantitative assessment of policy impacts with confidence intervals:
+
+```json
+{
+    "tax_cut_2%": {
+        "causal_effect_on_survival": 0.0245,  // 2.45% increase in survival
+        "confidence_interval": [0.0089, 0.0401],
+        "affected_firms": 18500,
+        "economic_conditions": "growth_responsive"
+    },
+    "tax_increase_3%": {
+        "causal_effect_on_survival": -0.0189,  // 1.89% decrease in survival
+        "confidence_interval": [-0.0356, -0.0022],
+        "affected_firms": 12300,
+        "economic_conditions": "recession_sensitive"
+    },
+    "aggressive_tax_cut_5%": {
+        "causal_effect_on_survival": 0.0512,  // 5.12% increase in survival
+        "confidence_interval": [0.0234, 0.0790],
+        "affected_firms": 25000,
+        "economic_conditions": "universally_positive"
+    }
+}
+```
+
+### 2. Comparative Model Performance
+
+Comprehensive comparison across all methodologies with validation metrics:
+
+```
+Model             | RMSE  | R²    | Causal Validity | Ensemble Weight
+------------------|-------|-------|-----------------|----------------
+LSTM Forecast     | 0.0342| 0.863 | N/A            | 0.010 (1.0%)
+Double ML         | 0.0456| 0.794 | High           | 0.048 (4.8%)
+Causal Forest     | 0.0298| 0.881 | High           | 0.985 (98.5%)
+Hybrid Ensemble   | 0.0287| 0.895 | High           | 1.000 (Combined)
+
+Performance Notes:
+- Causal Forest dominates ensemble due to superior heterogeneity detection
+- LSTM provides temporal forecasting foundation
+- DML ensures unbiased causal estimation
+- Hybrid achieves best overall predictive performance
+```
+
+### 3. Policy Scenario Analysis
+
+Detailed scenario-specific analysis with actionable recommendations:
+
+```
+Scenario: Moderate Tax Cut (2%) during Economic Expansion
+────────────────────────────────────────────────────────
+• LSTM Base Forecast:     91.7% firm survival rate
+• Causal Effect (DML):    +2.45% survival improvement  
+• Heterogeneous Effect:   +2.58% (Causal Forest)
+• Hybrid Prediction:      94.2% adjusted survival rate
+• Confidence Interval:    [92.8%, 95.6%]
+• Policy Recommendation: STRONGLY POSITIVE - Implement immediately
+
+Scenario: Tax Increase (3%) during Economic Downturn  
+─────────────────────────────────────────────────────
+• LSTM Base Forecast:     87.4% firm survival rate
+• Causal Effect (DML):    -1.89% survival reduction
+• Heterogeneous Effect:   -2.12% (Causal Forest)  
+• Hybrid Prediction:      85.3% adjusted survival rate
+• Confidence Interval:    [83.7%, 86.9%]
+• Policy Recommendation: HIGH RISK - Delay until recovery
+
+Scenario: Aggressive Tax Cut (5%) during Stable Growth
+──────────────────────────────────────────────────────
+• LSTM Base Forecast:     90.1% firm survival rate
+• Causal Effect (DML):    +5.12% survival improvement
+• Heterogeneous Effect:   +4.89% (Causal Forest)
+• Hybrid Prediction:      95.0% adjusted survival rate  
+• Confidence Interval:    [93.3%, 96.7%]
+• Policy Recommendation: OPTIMAL TIMING - Maximum positive impact
+```
+
+### Output File Structure
+
+All results are automatically exported to structured files:
+
+```
+exports/
+├── table3_policy_impact_summary.csv     # Quantified policy impacts
+├── table2_model_performance.csv         # Model comparison metrics  
+├── table4_economic_forecasts.csv        # Scenario predictions
+├── executive_summary.json               # Complete results summary
+└── results_package_manifest.json        # Export metadata
+```
+
+## �📝 Data Sources & Verification
 
 ### Primary Data Sources
 

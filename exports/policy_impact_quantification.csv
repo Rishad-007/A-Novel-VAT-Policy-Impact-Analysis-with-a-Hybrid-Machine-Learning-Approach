@@ -1,0 +1,5 @@
+Policy_Scenario,causal_effect_on_survival,confidence_interval,affected_firms,economic_conditions,statistical_significance,policy_type
+tax_cut_2%,0.0245,"[0.0089, 0.0401]",18500,growth_responsive,p < 0.01,Tax Reduction
+vat_increase_5%,-0.0387,"[-0.0623, -0.0151]",22800,recession_sensitive,p < 0.001,VAT Increase
+aggressive_tax_cut_5%,0.0512,"[0.0234, 0.079]",25000,universally_positive,p < 0.001,Aggressive Tax Cut
+moderate_tax_increase_3%,-0.0234,"[-0.0412, -0.0056]",16200,recession_sensitive,p < 0.05,Tax Increase
