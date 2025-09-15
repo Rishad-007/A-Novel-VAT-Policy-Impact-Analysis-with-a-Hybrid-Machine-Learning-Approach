@@ -1,0 +1,8 @@
+{
+  "overall_quality_score": -3.7786905012309133,
+  "cross_validation_r2": -16.854709391258236,
+  "coverage_rate": 0.15217391304347827,
+  "stability_score": 0.028296087961184227,
+  "sensitivity_score": 0.6986304550864404,
+  "quality_rating": "NEEDS IMPROVEMENT - Significant limitations"
+}
