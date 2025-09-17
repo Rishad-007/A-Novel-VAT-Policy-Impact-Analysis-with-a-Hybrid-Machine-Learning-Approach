@@ -215,24 +215,24 @@ The framework provides detailed quantitative assessment of policy impacts with c
 
 ```json
 {
-    "tax_cut_2%": {
-        "causal_effect_on_survival": 0.0245,  // 2.45% increase in survival
-        "confidence_interval": [0.0089, 0.0401],
-        "affected_firms": 18500,
-        "economic_conditions": "growth_responsive"
-    },
-    "tax_increase_3%": {
-        "causal_effect_on_survival": -0.0189,  // 1.89% decrease in survival
-        "confidence_interval": [-0.0356, -0.0022],
-        "affected_firms": 12300,
-        "economic_conditions": "recession_sensitive"
-    },
-    "aggressive_tax_cut_5%": {
-        "causal_effect_on_survival": 0.0512,  // 5.12% increase in survival
-        "confidence_interval": [0.0234, 0.0790],
-        "affected_firms": 25000,
-        "economic_conditions": "universally_positive"
-    }
+  "tax_cut_2%": {
+    "causal_effect_on_survival": 0.0245, // 2.45% increase in survival
+    "confidence_interval": [0.0089, 0.0401],
+    "affected_firms": 18500,
+    "economic_conditions": "growth_responsive"
+  },
+  "tax_increase_3%": {
+    "causal_effect_on_survival": -0.0189, // 1.89% decrease in survival
+    "confidence_interval": [-0.0356, -0.0022],
+    "affected_firms": 12300,
+    "economic_conditions": "recession_sensitive"
+  },
+  "aggressive_tax_cut_5%": {
+    "causal_effect_on_survival": 0.0512, // 5.12% increase in survival
+    "confidence_interval": [0.0234, 0.079],
+    "affected_firms": 25000,
+    "economic_conditions": "universally_positive"
+  }
 }
 ```
 
@@ -263,17 +263,17 @@ Detailed scenario-specific analysis with actionable recommendations:
 Scenario: Moderate Tax Cut (2%) during Economic Expansion
 ────────────────────────────────────────────────────────
 • LSTM Base Forecast:     91.7% firm survival rate
-• Causal Effect (DML):    +2.45% survival improvement  
+• Causal Effect (DML):    +2.45% survival improvement
 • Heterogeneous Effect:   +2.58% (Causal Forest)
 • Hybrid Prediction:      94.2% adjusted survival rate
 • Confidence Interval:    [92.8%, 95.6%]
 • Policy Recommendation: STRONGLY POSITIVE - Implement immediately
 
-Scenario: Tax Increase (3%) during Economic Downturn  
+Scenario: Tax Increase (3%) during Economic Downturn
 ─────────────────────────────────────────────────────
 • LSTM Base Forecast:     87.4% firm survival rate
 • Causal Effect (DML):    -1.89% survival reduction
-• Heterogeneous Effect:   -2.12% (Causal Forest)  
+• Heterogeneous Effect:   -2.12% (Causal Forest)
 • Hybrid Prediction:      85.3% adjusted survival rate
 • Confidence Interval:    [83.7%, 86.9%]
 • Policy Recommendation: HIGH RISK - Delay until recovery
@@ -283,7 +283,7 @@ Scenario: Aggressive Tax Cut (5%) during Stable Growth
 • LSTM Base Forecast:     90.1% firm survival rate
 • Causal Effect (DML):    +5.12% survival improvement
 • Heterogeneous Effect:   +4.89% (Causal Forest)
-• Hybrid Prediction:      95.0% adjusted survival rate  
+• Hybrid Prediction:      95.0% adjusted survival rate
 • Confidence Interval:    [93.3%, 96.7%]
 • Policy Recommendation: OPTIMAL TIMING - Maximum positive impact
 ```
@@ -295,7 +295,7 @@ All results are automatically exported to structured files:
 ```
 exports/
 ├── table3_policy_impact_summary.csv     # Quantified policy impacts
-├── table2_model_performance.csv         # Model comparison metrics  
+├── table2_model_performance.csv         # Model comparison metrics
 ├── table4_economic_forecasts.csv        # Scenario predictions
 ├── executive_summary.json               # Complete results summary
 └── results_package_manifest.json        # Export metadata
@@ -368,3 +368,121 @@ For questions about this research or potential collaborations, please reach out 
 ---
 
 **Note**: This project represents cutting-edge research in economic policy analysis. All findings should be interpreted within the context of the methodological assumptions and data limitations discussed in the full academic paper.
+
+## 🗂️ Unified Thesis Asset Management
+
+All figures, tables, models, summaries, and data snapshots used in the thesis are now consolidated under a single structured directory: `thesis_images/` (created automatically).
+
+### Directory Layout
+
+```
+thesis_images/
+├── figures/          # All static visual assets (PNG/SVG/PDF)
+├── tables/           # CSV tables (plus optional JSON metadata)
+├── data_snapshots/   # Intermediate / snapshot datasets
+├── models/           # Serialized model artifacts
+├── summaries/        # Executive narrative or JSON summaries
+└── manifests/        # Auto-generated manifest (JSON + CSV)
+```
+
+### Naming Convention
+
+Each asset follows:
+
+```
+<section>__<short_descriptor>__v<major.minor>.<ext>
+```
+
+Examples:
+
+```
+forecasting__lstm_training_history__v1.0.png
+policy_analysis__policy_impact_quantification__v1.0.csv
+causal_inference__causal_forest_feature_importance__v1.0.csv
+```
+
+Sections currently used (heuristic mapping):
+
+- `forecasting`
+- `causal_inference`
+- `policy_analysis`
+- `model_evaluation`
+- `general`
+
+### Manifest
+
+The file `thesis_images/manifests/asset_manifest.json` (and CSV) contains structured metadata for every registered asset:
+
+Fields:
+
+```
+id, category, section, name, version, filename, path, created_at, tags, description, source_code_reference
+```
+
+You can load it in Python:
+
+```python
+import json, pandas as pd
+with open('thesis_images/manifests/asset_manifest.json') as f:
+    data = json.load(f)
+manifest_df = pd.DataFrame(data)
+manifest_df.head()
+```
+
+### Programmatic Saving
+
+Use the `ThesisAssetManager` to save future assets directly:
+
+```python
+from thesis_asset_manager import ThesisAssetManager
+assets = ThesisAssetManager().ensure()
+
+# After creating a matplotlib plot:
+fig, ax = plt.subplots()
+ax.plot([1,2,3],[2,3,4])
+assets.save_figure(fig, section='forecasting', name='example_trend', description='Demo figure', tags=['demo','forecasting'])
+
+# Saving a table (pandas DataFrame):
+assets.save_table(df, section='model_evaluation', name='new_performance_metrics', version='1.1', description='Updated metrics')
+
+# Saving a textual or JSON summary:
+assets.save_summary({'result': 'positive', 'ate': 0.024}, section='policy_analysis', name='tax_cut_summary')
+```
+
+### Retroactive Organization
+
+Existing artifacts were imported using `organize_thesis_assets.py`. Re-run if new legacy exports are added:
+
+```bash
+python organize_thesis_assets.py
+```
+
+### Updating an Asset
+
+Increment the version (e.g. `v1.1`) when a figure or table is regenerated with meaningful changes. The manifest automatically deduplicates the `(category, section, name, version)` combination.
+
+### Referencing in Thesis Text
+
+Because each filename embeds its semantic meaning, you can directly cite:
+
+- Figure: `forecasting__hybrid_model_results__v1.0.png`
+- Table: `policy_analysis__policy_impact_quantification__v1.0.csv`
+
+This ensures stable, unambiguous references in manuscript drafts.
+
+### Benefits
+
+- Centralized, versioned, and searchable assets
+- Stable naming for citation and LaTeX inclusion
+- Automated manifest for cross-referencing and reproducibility
+- Extensible: add new categories or metadata fields via `thesis_asset_manager.py`
+
+### Future Enhancements (Ideas)
+
+- Automatic LaTeX table & figure snippet generation
+- Hash-based change detection to auto-bump versions
+- Inline notebook widget to browse and insert asset references
+
+---
+
+For any new analysis step, prefer using the asset manager methods instead of ad-hoc `plt.savefig` or `DataFrame.to_csv` calls to maintain consistency.

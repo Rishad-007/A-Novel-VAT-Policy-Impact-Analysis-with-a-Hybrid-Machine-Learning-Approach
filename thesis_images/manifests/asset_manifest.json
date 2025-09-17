@@ -1,0 +1,452 @@
+[
+  {
+    "id": "ebce183e-182f-45e4-9195-cd4f2511032e",
+    "category": "figure",
+    "section": "causal_inference",
+    "name": "causal_forest_results",
+    "version": "v1.0",
+    "filename": "causal_inference__causal_forest_results__v1.0.png",
+    "path": "figures/causal_inference__causal_forest_results__v1.0.png",
+    "created_at": "2025-09-17T01:08:31.694907Z",
+    "tags": [
+      "causal_inference"
+    ],
+    "description": "Imported existing figure from figures/causal_forest_results.png",
+    "source_code_reference": null
+  },
+  {
+    "id": "613a1027-f752-4a6c-8a17-92453c0dd36e",
+    "category": "figure",
+    "section": "forecasting",
+    "name": "lstm_training_history",
+    "version": "v1.0",
+    "filename": "forecasting__lstm_training_history__v1.0.png",
+    "path": "figures/forecasting__lstm_training_history__v1.0.png",
+    "created_at": "2025-09-17T01:08:31.704894Z",
+    "tags": [
+      "forecasting"
+    ],
+    "description": "Imported existing figure from figures/lstm_training_history.png",
+    "source_code_reference": null
+  },
+  {
+    "id": "69f08f8b-3ff8-4909-8665-7b0db25e46bd",
+    "category": "figure",
+    "section": "general",
+    "name": "dml_analysis_results",
+    "version": "v1.0",
+    "filename": "general__dml_analysis_results__v1.0.png",
+    "path": "figures/general__dml_analysis_results__v1.0.png",
+    "created_at": "2025-09-17T01:08:31.707083Z",
+    "tags": [
+      "general"
+    ],
+    "description": "Imported existing figure from figures/dml_analysis_results.png",
+    "source_code_reference": null
+  },
+  {
+    "id": "f56790ca-60ac-45b8-9f47-7821db69c641",
+    "category": "figure",
+    "section": "policy_analysis",
+    "name": "hybrid_policy_analysis_comprehensive",
+    "version": "v1.0",
+    "filename": "policy_analysis__hybrid_policy_analysis_comprehensive__v1.0.png",
+    "path": "figures/policy_analysis__hybrid_policy_analysis_comprehensive__v1.0.png",
+    "created_at": "2025-09-17T01:08:31.714620Z",
+    "tags": [
+      "policy_analysis"
+    ],
+    "description": "Imported existing figure from figures/hybrid_policy_analysis_comprehensive.png",
+    "source_code_reference": null
+  },
+  {
+    "id": "57efabae-f591-4bd9-b8ce-adf4932f2362",
+    "category": "figure",
+    "section": "general",
+    "name": "figure3_hybrid_model_results",
+    "version": "v1.0",
+    "filename": "general__figure3_hybrid_model_results__v1.0.png",
+    "path": "figures/general__figure3_hybrid_model_results__v1.0.png",
+    "created_at": "2025-09-17T01:08:31.721138Z",
+    "tags": [
+      "general"
+    ],
+    "description": "Imported existing figure from exports/figure3_hybrid_model_results.png",
+    "source_code_reference": null
+  },
+  {
+    "id": "f36a8786-f535-4978-97f4-863fbab0005a",
+    "category": "figure",
+    "section": "policy_analysis",
+    "name": "interactive_vat_5.0percent_analysis",
+    "version": "v1.0",
+    "filename": "policy_analysis__interactive_vat_5.0percent_analysis__v1.0.png",
+    "path": "figures/policy_analysis__interactive_vat_5.0percent_analysis__v1.0.png",
+    "created_at": "2025-09-17T01:08:31.727681Z",
+    "tags": [
+      "policy_analysis"
+    ],
+    "description": "Imported existing figure from exports/interactive_vat_5.0percent_analysis.png",
+    "source_code_reference": null
+  },
+  {
+    "id": "bfb1a9d1-a974-49ca-a853-c26504160a9b",
+    "category": "figure",
+    "section": "general",
+    "name": "figure1_model_architecture",
+    "version": "v1.0",
+    "filename": "general__figure1_model_architecture__v1.0.png",
+    "path": "figures/general__figure1_model_architecture__v1.0.png",
+    "created_at": "2025-09-17T01:08:31.729749Z",
+    "tags": [
+      "general"
+    ],
+    "description": "Imported existing figure from exports/figure1_model_architecture.png",
+    "source_code_reference": null
+  },
+  {
+    "id": "d15d6fe1-3081-40cb-9522-e4c3a6c659fa",
+    "category": "figure",
+    "section": "general",
+    "name": "figure2_economic_data_overview",
+    "version": "v1.0",
+    "filename": "general__figure2_economic_data_overview__v1.0.png",
+    "path": "figures/general__figure2_economic_data_overview__v1.0.png",
+    "created_at": "2025-09-17T01:08:31.732048Z",
+    "tags": [
+      "general"
+    ],
+    "description": "Imported existing figure from exports/figure2_economic_data_overview.png",
+    "source_code_reference": null
+  },
+  {
+    "id": "cfcc7542-cb77-45ee-8707-fb731d455a8b",
+    "category": "figure",
+    "section": "policy_analysis",
+    "name": "final_policy_impact_analysis",
+    "version": "v1.0",
+    "filename": "policy_analysis__final_policy_impact_analysis__v1.0.png",
+    "path": "figures/policy_analysis__final_policy_impact_analysis__v1.0.png",
+    "created_at": "2025-09-17T01:08:31.738172Z",
+    "tags": [
+      "policy_analysis"
+    ],
+    "description": "Imported existing figure from exports/final_policy_impact_analysis.png",
+    "source_code_reference": null
+  },
+  {
+    "id": "a3e3394a-1b2f-4c0c-88c4-df086d5cf786",
+    "category": "table",
+    "section": "model_evaluation",
+    "name": "stability_analysis",
+    "version": "v1.0",
+    "filename": "model_evaluation__stability_analysis__v1.0.csv",
+    "path": "tables/model_evaluation__stability_analysis__v1.0.csv",
+    "created_at": "2025-09-17T01:08:31.740116Z",
+    "tags": [
+      "model_evaluation"
+    ],
+    "description": "Imported existing table from exports/stability_analysis.csv",
+    "source_code_reference": null
+  },
+  {
+    "id": "c2c53f58-f26d-444f-920e-70b4cc313489",
+    "category": "table",
+    "section": "policy_analysis",
+    "name": "vat_increase_scenario_analysis",
+    "version": "v1.0",
+    "filename": "policy_analysis__vat_increase_scenario_analysis__v1.0.csv",
+    "path": "tables/policy_analysis__vat_increase_scenario_analysis__v1.0.csv",
+    "created_at": "2025-09-17T01:08:31.741805Z",
+    "tags": [
+      "policy_analysis"
+    ],
+    "description": "Imported existing table from exports/vat_increase_scenario_analysis.csv",
+    "source_code_reference": null
+  },
+  {
+    "id": "42f8939d-66f2-4989-8f34-a2af4fe56058",
+    "category": "table",
+    "section": "model_evaluation",
+    "name": "table2_model_performance",
+    "version": "v1.0",
+    "filename": "model_evaluation__table2_model_performance__v1.0.csv",
+    "path": "tables/model_evaluation__table2_model_performance__v1.0.csv",
+    "created_at": "2025-09-17T01:08:31.744419Z",
+    "tags": [
+      "model_evaluation"
+    ],
+    "description": "Imported existing table from exports/table2_model_performance.csv",
+    "source_code_reference": null
+  },
+  {
+    "id": "bb9eaef3-16b7-4940-a80c-981b5467af8f",
+    "category": "table",
+    "section": "model_evaluation",
+    "name": "model_performance_comparison",
+    "version": "v1.0",
+    "filename": "model_evaluation__model_performance_comparison__v1.0.csv",
+    "path": "tables/model_evaluation__model_performance_comparison__v1.0.csv",
+    "created_at": "2025-09-17T01:08:31.746346Z",
+    "tags": [
+      "model_evaluation"
+    ],
+    "description": "Imported existing table from exports/model_performance_comparison.csv",
+    "source_code_reference": null
+  },
+  {
+    "id": "6345af33-dbd6-433a-b776-3be96a69623a",
+    "category": "table",
+    "section": "policy_analysis",
+    "name": "table3_policy_impact_summary",
+    "version": "v1.0",
+    "filename": "policy_analysis__table3_policy_impact_summary__v1.0.csv",
+    "path": "tables/policy_analysis__table3_policy_impact_summary__v1.0.csv",
+    "created_at": "2025-09-17T01:08:31.748177Z",
+    "tags": [
+      "policy_analysis"
+    ],
+    "description": "Imported existing table from exports/table3_policy_impact_summary.csv",
+    "source_code_reference": null
+  },
+  {
+    "id": "5701035c-8035-44ef-846d-ffbcbdba3ef3",
+    "category": "table",
+    "section": "model_evaluation",
+    "name": "cross_validation_results",
+    "version": "v1.0",
+    "filename": "model_evaluation__cross_validation_results__v1.0.csv",
+    "path": "tables/model_evaluation__cross_validation_results__v1.0.csv",
+    "created_at": "2025-09-17T01:08:31.749909Z",
+    "tags": [
+      "model_evaluation"
+    ],
+    "description": "Imported existing table from exports/cross_validation_results.csv",
+    "source_code_reference": null
+  },
+  {
+    "id": "81d83111-b3e1-4182-a342-f3ceee555096",
+    "category": "table",
+    "section": "policy_analysis",
+    "name": "interactive_vat_5.0percent_impact",
+    "version": "v1.0",
+    "filename": "policy_analysis__interactive_vat_5.0percent_impact__v1.0.csv",
+    "path": "tables/policy_analysis__interactive_vat_5.0percent_impact__v1.0.csv",
+    "created_at": "2025-09-17T01:08:31.751638Z",
+    "tags": [
+      "policy_analysis"
+    ],
+    "description": "Imported existing table from exports/interactive_vat_5.0percent_impact.csv",
+    "source_code_reference": null
+  },
+  {
+    "id": "7c112a12-292c-4a55-90c7-0ede2700c38a",
+    "category": "table",
+    "section": "general",
+    "name": "table5_detailed_model_comparison",
+    "version": "v1.0",
+    "filename": "general__table5_detailed_model_comparison__v1.0.csv",
+    "path": "tables/general__table5_detailed_model_comparison__v1.0.csv",
+    "created_at": "2025-09-17T01:08:31.753415Z",
+    "tags": [
+      "general"
+    ],
+    "description": "Imported existing table from exports/table5_detailed_model_comparison.csv",
+    "source_code_reference": null
+  },
+  {
+    "id": "97ba0b73-8480-4f4f-948c-e28d2ffbbebc",
+    "category": "table",
+    "section": "policy_analysis",
+    "name": "policy_impact_quantification",
+    "version": "v1.0",
+    "filename": "policy_analysis__policy_impact_quantification__v1.0.csv",
+    "path": "tables/policy_analysis__policy_impact_quantification__v1.0.csv",
+    "created_at": "2025-09-17T01:08:31.755173Z",
+    "tags": [
+      "policy_analysis"
+    ],
+    "description": "Imported existing table from exports/policy_impact_quantification.csv",
+    "source_code_reference": null
+  },
+  {
+    "id": "24c52815-c613-488a-91b9-e26aa9eb0081",
+    "category": "table",
+    "section": "forecasting",
+    "name": "table4_economic_forecasts",
+    "version": "v1.0",
+    "filename": "forecasting__table4_economic_forecasts__v1.0.csv",
+    "path": "tables/forecasting__table4_economic_forecasts__v1.0.csv",
+    "created_at": "2025-09-17T01:08:31.756983Z",
+    "tags": [
+      "forecasting"
+    ],
+    "description": "Imported existing table from exports/table4_economic_forecasts.csv",
+    "source_code_reference": null
+  },
+  {
+    "id": "0e0c9952-5864-4de4-b68b-8fe650ad1cb1",
+    "category": "table",
+    "section": "general",
+    "name": "table1_descriptive_statistics",
+    "version": "v1.0",
+    "filename": "general__table1_descriptive_statistics__v1.0.csv",
+    "path": "tables/general__table1_descriptive_statistics__v1.0.csv",
+    "created_at": "2025-09-17T01:08:31.758801Z",
+    "tags": [
+      "general"
+    ],
+    "description": "Imported existing table from exports/table1_descriptive_statistics.csv",
+    "source_code_reference": null
+  },
+  {
+    "id": "b3af5ad8-d939-4fdb-afe5-74cb82686c1e",
+    "category": "table",
+    "section": "forecasting",
+    "name": "hybrid_economic_forecasts",
+    "version": "v1.0",
+    "filename": "forecasting__hybrid_economic_forecasts__v1.0.csv",
+    "path": "tables/forecasting__hybrid_economic_forecasts__v1.0.csv",
+    "created_at": "2025-09-17T01:08:31.760711Z",
+    "tags": [
+      "forecasting"
+    ],
+    "description": "Imported existing table from results/hybrid_economic_forecasts.csv",
+    "source_code_reference": null
+  },
+  {
+    "id": "428ea3b4-c95b-40da-a412-847bf141a20c",
+    "category": "table",
+    "section": "forecasting",
+    "name": "lstm_forecasts",
+    "version": "v1.0",
+    "filename": "forecasting__lstm_forecasts__v1.0.csv",
+    "path": "tables/forecasting__lstm_forecasts__v1.0.csv",
+    "created_at": "2025-09-17T01:08:31.764335Z",
+    "tags": [
+      "forecasting"
+    ],
+    "description": "Imported existing table from results/lstm_forecasts.csv",
+    "source_code_reference": null
+  },
+  {
+    "id": "d14d9d02-43ec-49b3-89c4-ba474cc5a6cd",
+    "category": "table",
+    "section": "policy_analysis",
+    "name": "policy_impact_metrics",
+    "version": "v1.0",
+    "filename": "policy_analysis__policy_impact_metrics__v1.0.csv",
+    "path": "tables/policy_analysis__policy_impact_metrics__v1.0.csv",
+    "created_at": "2025-09-17T01:08:31.766831Z",
+    "tags": [
+      "policy_analysis"
+    ],
+    "description": "Imported existing table from results/policy_impact_metrics.csv",
+    "source_code_reference": null
+  },
+  {
+    "id": "70b962ee-78bc-4a05-917e-626a57f8113b",
+    "category": "table",
+    "section": "causal_inference",
+    "name": "dml_heterogeneous_effects",
+    "version": "v1.0",
+    "filename": "causal_inference__dml_heterogeneous_effects__v1.0.csv",
+    "path": "tables/causal_inference__dml_heterogeneous_effects__v1.0.csv",
+    "created_at": "2025-09-17T01:08:31.771450Z",
+    "tags": [
+      "causal_inference"
+    ],
+    "description": "Imported existing table from results/dml_heterogeneous_effects.csv",
+    "source_code_reference": null
+  },
+  {
+    "id": "445c6ed7-0861-437f-87f8-897b4248f85a",
+    "category": "table",
+    "section": "causal_inference",
+    "name": "causal_forest_heterogeneous_effects",
+    "version": "v1.0",
+    "filename": "causal_inference__causal_forest_heterogeneous_effects__v1.0.csv",
+    "path": "tables/causal_inference__causal_forest_heterogeneous_effects__v1.0.csv",
+    "created_at": "2025-09-17T01:08:31.776267Z",
+    "tags": [
+      "causal_inference"
+    ],
+    "description": "Imported existing table from results/causal_forest_heterogeneous_effects.csv",
+    "source_code_reference": null
+  },
+  {
+    "id": "0b5b1fef-a51b-480c-bafc-23f4116179a0",
+    "category": "table",
+    "section": "causal_inference",
+    "name": "dml_feature_importance",
+    "version": "v1.0",
+    "filename": "causal_inference__dml_feature_importance__v1.0.csv",
+    "path": "tables/causal_inference__dml_feature_importance__v1.0.csv",
+    "created_at": "2025-09-17T01:08:31.778403Z",
+    "tags": [
+      "causal_inference"
+    ],
+    "description": "Imported existing table from results/dml_feature_importance.csv",
+    "source_code_reference": null
+  },
+  {
+    "id": "7a1d9943-a3d3-4d33-8899-c27095b0e4a2",
+    "category": "table",
+    "section": "policy_analysis",
+    "name": "policy_scenario_analysis",
+    "version": "v1.0",
+    "filename": "policy_analysis__policy_scenario_analysis__v1.0.csv",
+    "path": "tables/policy_analysis__policy_scenario_analysis__v1.0.csv",
+    "created_at": "2025-09-17T01:08:31.780471Z",
+    "tags": [
+      "policy_analysis"
+    ],
+    "description": "Imported existing table from results/policy_scenario_analysis.csv",
+    "source_code_reference": null
+  },
+  {
+    "id": "5be2812d-3395-40b0-8eac-6ccf623923c1",
+    "category": "table",
+    "section": "causal_inference",
+    "name": "causal_forest_feature_importance",
+    "version": "v1.0",
+    "filename": "causal_inference__causal_forest_feature_importance__v1.0.csv",
+    "path": "tables/causal_inference__causal_forest_feature_importance__v1.0.csv",
+    "created_at": "2025-09-17T01:08:31.783014Z",
+    "tags": [
+      "causal_inference"
+    ],
+    "description": "Imported existing table from results/causal_forest_feature_importance.csv",
+    "source_code_reference": null
+  },
+  {
+    "id": "7269ad01-e7a1-4fb9-be0e-53fd4f87f941",
+    "category": "table",
+    "section": "policy_analysis",
+    "name": "causal_forest_policy_recommendations",
+    "version": "v1.0",
+    "filename": "policy_analysis__causal_forest_policy_recommendations__v1.0.csv",
+    "path": "tables/policy_analysis__causal_forest_policy_recommendations__v1.0.csv",
+    "created_at": "2025-09-17T01:08:31.785387Z",
+    "tags": [
+      "policy_analysis"
+    ],
+    "description": "Imported existing table from results/causal_forest_policy_recommendations.csv",
+    "source_code_reference": null
+  },
+  {
+    "id": "4ab22d29-2371-4196-abfe-e7e41ae56c36",
+    "category": "model",
+    "section": "forecasting",
+    "name": "lstm_forecaster",
+    "version": "v1.0",
+    "filename": "forecasting__lstm_forecaster__v1.0.h5",
+    "path": "models/forecasting__lstm_forecaster__v1.0.h5",
+    "created_at": "2025-09-17T01:08:31.788329Z",
+    "tags": [
+      "forecasting"
+    ],
+    "description": "Imported existing model artifact from models/lstm_forecaster.h5",
+    "source_code_reference": null
+  }
+]

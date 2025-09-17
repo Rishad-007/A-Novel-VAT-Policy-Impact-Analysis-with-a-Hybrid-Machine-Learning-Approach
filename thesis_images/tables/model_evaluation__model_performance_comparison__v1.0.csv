@@ -1,0 +1,5 @@
+Model,RMSE,R²,Causal_Validity,Ensemble_Weight,Primary_Strength,Use_Case
+LSTM Forecast,0.0342,0.863,N/A,1.0%,Temporal Patterns,Forecasting
+Double ML,0.0456,0.794,High,4.8%,Unbiased ATE,Policy Assessment
+Causal Forest,0.0298,0.881,High,98.5%,Heterogeneity,Targeted Policy
+Hybrid Ensemble,0.0287,0.895,High,100% (Combined),Robust Integration,Comprehensive Analysis
