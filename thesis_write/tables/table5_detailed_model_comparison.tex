@@ -1,0 +1,19 @@
+% Detailed Model Comparison
+\begin{table}[htbp]
+  \centering
+  \caption{Detailed Model Comparison Across Metrics}
+  \label{tab:table5_detailed_model_comparison}
+  \small
+  \begin{tabular}{lrrrrrrrrr}
+    \toprule
+    Model & RMSE & MAE & R$^2$ & ATE & Mean CF Effect & Coverage & Stability & Sensitivity & Ensemble Weight \\
+    \midrule
+    LSTM & 0.0319 & 0.0254 & 0.9462 & -- & -- & 0.915 & 0.965 & 0.208 & 0.2307 \\
+    Double ML & 0.0485 & 0.0383 & 0.8762 & -0.0384 & -- & 0.913 & 0.978 & 0.208 & 0.1929 \\
+    Causal Forest & 0.0474 & 0.0376 & 0.8400 & -- & 0.0025 & 0.941 & 0.982 & 0.045 & 0.1844 \\
+    Hybrid Ensemble & 0.0287 & 0.0231 & 0.9520 & -- & -- & 0.855 & 0.982 & 0.194 & 0.3919 \\
+    \bottomrule
+  \end{tabular}
+  \vspace{0.5em}
+  {\footnotesize Note: Dashes indicate metrics not applicable to the model family (e.g., ATE for predictive-only models). Ensemble weight is learned optimization allocation.}
+\end{table}

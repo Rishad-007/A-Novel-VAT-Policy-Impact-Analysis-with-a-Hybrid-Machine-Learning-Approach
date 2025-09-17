@@ -1,0 +1,19 @@
+% Model Performance Comparison
+\begin{table}[htbp]
+  \centering
+  \caption{Comparative Predictive Performance and Functional Roles}
+  \label{tab:model_performance_comparison}
+  \small
+  \begin{tabular}{lllllll}
+    \toprule
+    Model & RMSE & $R^2$ & Causal Validity & Ensemble Weight & Primary Strength & Use Case \\
+    \midrule
+    LSTM Forecast & 0.0342 & 0.863 & N/A & 1.0\% & Temporal Patterns & Forecasting \\
+    Double ML & 0.0456 & 0.794 & High & 4.8\% & Unbiased ATE & Policy Assessment \\
+    Causal Forest & 0.0298 & 0.881 & High & 98.5\% & Heterogeneity & Targeted Policy \\
+    Hybrid Ensemble & 0.0287 & 0.895 & High & 100\% (Combined) & Robust Integration & Comprehensive Analysis \\
+    \bottomrule
+  \end{tabular}
+  \vspace{0.5em}
+  {\footnotesize Note: Ensemble weight reflects contribution in final integrated predictions.}
+\end{table}

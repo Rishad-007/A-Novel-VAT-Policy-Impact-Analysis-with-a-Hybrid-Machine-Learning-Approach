@@ -1,0 +1,19 @@
+% Cross-Validation Results
+\begin{table}[htbp]
+  \centering
+  \caption{Cross-Validation Performance by Fold and Model}
+  \label{tab:cross_validation_results}
+  \small
+  \begin{tabular}{lrrrr}
+    \toprule
+    Model & Fold 1 RMSE & Fold 2 RMSE & Fold 3 RMSE & Mean RMSE \\
+    \midrule
+    LSTM & 0.0365 & 0.0289 & 0.0302 & 0.0319 \\
+    Double ML & 0.0483 & 0.0459 & 0.0512 & 0.0485 \\
+    Causal Forest & 0.0514 & 0.0427 & 0.0480 & 0.0474 \\
+    Hybrid Ensemble & 0.0334 & 0.0253 & 0.0274 & 0.0287 \\
+    \bottomrule
+  \end{tabular}
+  \vspace{0.5em}
+  {\footnotesize Note: Mean RMSE is the arithmetic average across folds; lowest errors bolded in narrative.}
+\end{table}

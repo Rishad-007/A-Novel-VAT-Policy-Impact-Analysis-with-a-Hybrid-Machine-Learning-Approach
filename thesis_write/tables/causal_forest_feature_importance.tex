@@ -1,0 +1,26 @@
+% Causal Forest Feature Importance
+\begin{table}[htbp]
+  \centering
+  \caption{Causal Forest Feature Importance (Correlation with CATE)}
+  \label{tab:cf_feature_importance}
+  \small
+  \begin{tabular}{lrrr}
+    \toprule
+    Feature & Correlation & p-value & |Correlation| \\
+    \midrule
+    firm\_size\_proxy & 0.6310 & 3.38e-06 & 0.6310 \\
+    firm\_density & 0.6306 & 3.44e-06 & 0.6306 \\
+    InterestRate & -0.5138 & 3.06e-04 & 0.5138 \\
+    economic\_stress & -0.5025 & 4.36e-04 & 0.5025 \\
+    Unemployment & -0.4110 & 5.04e-03 & 0.4110 \\
+    economic\_regime\_encoded & 0.3370 & 2.36e-02 & 0.3370 \\
+    Inflation & -0.3331 & 2.53e-02 & 0.3331 \\
+    gdp\_volatility & -0.3327 & 2.55e-02 & 0.3327 \\
+    GDP\_Growth & 0.1656 & 2.77e-01 & 0.1656 \\
+    cumulative\_policy & 0.0758 & 6.21e-01 & 0.0758 \\
+    inflation\_volatility & -0.0702 & 6.47e-01 & 0.0702 \\
+    \bottomrule
+  \end{tabular}
+  \vspace{0.5em}
+  {\footnotesize Note: Correlations measure linear association with estimated CATEs.}
+\end{table}

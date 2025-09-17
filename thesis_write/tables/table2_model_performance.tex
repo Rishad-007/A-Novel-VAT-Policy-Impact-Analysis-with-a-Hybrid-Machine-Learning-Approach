@@ -1,0 +1,19 @@
+% Table 2: Model Performance (Summary)
+\begin{table}[htbp]
+  \centering
+  \caption{Model Purposes and Primary Metrics}
+  \label{tab:model_performance}
+  \small
+  \begin{tabular}{llll}
+    \toprule
+    Model & Primary Purpose & Key Metric & Confidence Interval / Notes \\
+    \midrule
+    LSTM & Time Series Forecasting & Training Loss: 0.029338 & Bootstrap CI (Training) \\
+    Double ML & Causal Effect Estimation & ATE: -0.038398 & [ -0.075808, -0.000988 ] \\
+    Causal Forest & Heterogeneous Effects & Mean Effect: 0.002458 & Individual CIs calculated \\
+    Hybrid Ensemble & Integrated Policy Analysis & Weight Dist.: [0.0348, 0.0047, 0.9605] & Prediction Intervals \\
+    \bottomrule
+  \end{tabular}
+  \vspace{0.5em}
+  {\footnotesize Note: Weight distribution corresponds to (LSTM, DML, Causal Forest).}
+\end{table}

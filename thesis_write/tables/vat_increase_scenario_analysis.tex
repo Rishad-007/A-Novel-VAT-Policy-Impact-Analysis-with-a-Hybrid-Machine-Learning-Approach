@@ -1,0 +1,18 @@
+% VAT Increase Scenario Analysis
+\begin{table}[htbp]
+  \centering
+  \caption{Macro-Conditioned VAT Increase Impact Assessment}
+  \label{tab:vat_increase_scenario}
+  \small
+  \begin{tabular}{lrrrrrrll}
+    \toprule
+    Context & LSTM Forecast & DML Effect & CF Effect & Hybrid Pred. & CI Low & CI High & Risk & Recommendation \\
+    \midrule
+    Expansion & 91.7\% & -3.87\% & -4.12\% & 87.6\% & 86.1\% & 89.1\% & Medium & Consider alternatives \\
+    Downturn & 87.4\% & -3.87\% & -4.56\% & 82.9\% & 81.2\% & 84.6\% & High & Postpone strongly \\
+    Stable Growth & 90.1\% & -3.87\% & -3.89\% & 86.2\% & 84.7\% & 87.7\% & Med-Low & Proceed w/ caution \\
+    \bottomrule
+  \end{tabular}
+  \vspace{0.5em}
+  {\footnotesize Note: Effects reported as percent deviations from counterfactual baseline.}
+\end{table}
