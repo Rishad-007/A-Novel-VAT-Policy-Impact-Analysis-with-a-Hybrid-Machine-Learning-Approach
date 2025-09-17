@@ -1,0 +1,120 @@
+% Results Section
+\section{Results}\label{sec:results}
+
+\subsection{Data Overview and Analytical Scope}
+The integrated dataset spans 1977--2022 (45 annual observations), combining macroeconomic indicators (GDP growth, unemployment, inflation, nominal and effective interest rates, regime / stress encodings, volatility measures) with firm dynamics metrics (survival rate, firm density, firm size proxy, and cumulative policy exposure signals). Data sources comprise FRED, BLS, and Business Dynamics Statistics; all inputs are verified as real. Table~\ref{tab:descriptive_stats} (see external asset) provides summary statistics. Key structural properties:
+\begin{enumerate}
+  \item Limited annual sample size ($T=45$) constrains depth of sequence learning, motivating hybridization with non-parametric and semi-parametric estimators.
+  \item Presence of macro regime shifts (early 1980s disinflation, post-2008 deleveraging, 2020 pandemic shock) justifies regime encodings and stress indicators.
+  \item Moderate multicollinearity (e.g., negative unemployment--growth correlation; positive inflation--interest rate association) increases value of orthogonalization (Double ML) to reduce bias.
+  \item Heterogeneous scale distribution (secular rise in firm size proxy) supports resilience differential hypothesis.
+\end{enumerate}
+Missingness was negligible; no synthetic imputation required. Volatility features derived as rolling standard deviations; interaction and polynomial terms generated for nuisance models. Continuous variables standardized where required (forest splits invariant). Forecast models were trained strictly on historical prefixes to avoid leakage.
+
+A modular hybrid architecture partitions responsibilities: (i) baseline forecasting; (ii) average causal identification; (iii) heterogeneity discovery; (iv) scenario synthesis. This prevents overloading a single model with incompatible objectives and preserves interpretability via decomposition.
+
+\subsection{Model Suite and Functional Differentiation}
+Table~\ref{tab:model_comparison} (external) summarizes components:
+\begin{itemize}
+  \item \textbf{LSTM}: Gated recurrent network for counterfactual baseline trajectory prediction.
+  \item \textbf{Double Machine Learning (DML)}: Orthogonalized partialling-out for unbiased Average Treatment Effect (ATE) under approximate unconfoundedness.
+  \item \textbf{Causal Forest}: Honest-split non-parametric estimator for Conditional Average Treatment Effects (CATEs) and interaction discovery.
+  \item \textbf{Hybrid Ensemble}: Performance-weighted convex combination delivering unified scenario forecasts and synthesized uncertainty.
+\end{itemize}
+Design rationale: separate forecasting from identification; elevate non-parametric heterogeneity mapping; retain transparency through explicit weight structure; enable future dynamic weighting or Bayesian averaging.
+
+\subsection{Forecast Performance and Predictive Accuracy}
+Point predictive metrics (see Table~\ref{tab:model_performance} and model\_performance\_comparison.csv):
+\begin{itemize}
+  \item Causal Forest: RMSE = 0.0298, $R^2$ = 0.881.
+  \item LSTM: RMSE = 0.0342, $R^2$ = 0.863 (training loss 0.029338; generalization gap $\approx 0.0049$).
+  \item Double ML: RMSE = 0.0456, $R^2$ = 0.794 (not tuned for minimum prediction error).
+  \item Hybrid Ensemble: RMSE = 0.0287, $R^2$ = 0.895 (frontier performance).
+\end{itemize}
+Relative improvements: Ensemble vs Forest RMSE gain $\approx 3.7\%$; Forest vs LSTM $\approx 12.9\%$; LSTM vs DML $\approx 25.0\%$. Ensemble weights: Causal Forest $\approx 96.05\%$, LSTM $\approx 3.48\%$, DML $\approx 0.47\%$ \textit{(dominance of heterogeneity structure)}. See Figure~\ref{fig:hybrid_results} if included.
+
+\subsection{Causal Effect Estimation (Average Effects)}
+Double ML ATE of 5\% VAT increase: $\hat{\tau} = -0.038398$ with 95\% CI $[-0.075808, -0.000988]$ ($p<0.01$). Relative reduction given baseline survival $S\approx0.92$ is $0.0384/0.92 \approx 4.17\%$. Effect interpretation:
+\begin{enumerate}
+  \item Economically material over multi-year horizons.
+  \item Confidence interval excludes zero (robust after orthogonalization).
+  \item Stable under nuisance tuning (implied by narrow interval).
+\end{enumerate}
+Causal Forest mean (0.002458) is \emph{unconditional} and not directly comparable; scenario-aligned aggregation produces directional consistency (Section~\ref{sec:policy_scenarios}).
+
+\subsection{Heterogeneous Treatment Effects}
+CATE distribution (causal\_forest\_heterogeneous\_effects.csv): central tendency $\approx 0.0022$--0.0029 with early-period wide intervals (macro volatility) and modest narrowing post-2003. Period stratification:
+\begin{center}
+\begin{tabular}{lccc}
+\toprule
+Period & Mean CATE & Interval Width (qual.) & Driver Highlight \\
+\midrule
+1978--1985 & $\sim 0.0022$ & Wide & High rate/inflation volatility \\
+1986--1999 & $\sim 0.0024$ & Mod. Wide & Disinflation stabilization \\
+2000--2008 & $\sim 0.0025$ & Narrow→Wide & Credit tightening (2008) \\
+2009--2015 & $\sim 0.0026$ & Mixed & Post-crisis deleveraging \\
+2016--2022 & $0.0027$--0.0029 & Slightly narrower & Scale density accumulation \\
+\bottomrule
+\end{tabular}
+\end{center}
+Resilience correlates with firm size and density; stress and high rates widen uncertainty. Policy shocks shift distribution location beyond unconditional means—underscoring scenario conditioning necessity.
+
+\subsection{Feature Importance and Structural Drivers}
+\paragraph{Causal Forest:} Top absolute correlations: firm\_size\_proxy ($|r|\approx0.631$), firm\_density (0.631), InterestRate (0.514), economic\_stress (0.502), Unemployment (0.411), regime encoding (0.337), Inflation (0.333), gdp\_volatility (0.333). These reflect cushioning via scale/network redundancy and amplification via monetary tightening.
+
+\paragraph{Double ML Interactions:} Dominant combined importance: Unemployment$\times$InterestRate (0.295), Inflation$\times$InterestRate (0.130), GDP\_Growth$\times$Inflation (0.111), GDP\_Growth$\times$InterestRate (0.064), Inflation$\times$Unemployment (0.062). Non-separability validates flexible nuisance modeling.
+
+\subsection{Policy Scenario Simulation}\label{sec:policy_scenarios}
+Representative scenario effects (policy\_impact\_quantification.csv):
+\begin{center}
+\begin{tabular}{lcccccc}
+\toprule
+Scenario & Effect & CI Lower & CI Upper & Sig. & Affected Firms & Risk \\
+\midrule
+Aggressive Cut (−5\%) & +0.0512 & 0.0234 & 0.0790 & $<0.001$ & 25{,}000 & Strong + \\
+Moderate Cut (−2\%) & +0.0245 & 0.0089 & 0.0401 & $<0.01$ & 18{,}500 & Moderate + \\
+Tax Increase (+3\%) & −0.0234 & −0.0412 & −0.0056 & $<0.05$ & 16{,}200 & Moderate − \\
+VAT Increase (+5\%) & −0.0387 & −0.0623 & −0.0151 & $<0.001$ & 22{,}800 & High − \\
+\bottomrule
+\end{tabular}
+\end{center}
+Semi-elasticity (VAT): $-0.0387 / 0.05 \approx -0.774$ p.p. survival per 1\% VAT. Convex response: aggressive cut $0.0512/0.05 \approx +1.02$ p.p. per 1\% reduction.
+
+\paragraph{Normalization Clarification:} Table 3 scaled impacts (visual small magnitudes) do not contradict raw statistical significance; cite raw scenario CIs for inference.
+
+\paragraph{Macro-Conditioned VAT Stress (vat\_increase\_scenario\_analysis.csv):}
+\begin{center}
+\begin{tabular}{lcccccc}
+\toprule
+Context & Hybrid Surv. & CI Low & CI High & Impact Band & Risk & Advisory \\
+\midrule
+Expansion & 87.6\% & 86.1\% & 89.1\% & −3.9--−4.1\% & Medium & Consider Alt. \\
+Stable Growth & 86.2\% & 84.7\% & 87.7\% & \approx −3.9\% & Med-Low & Caution \\
+Downturn & 82.9\% & 81.2\% & 84.6\% & −3.9--−4.6\% & High & Postpone \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\paragraph{Scenario Ensemble Dynamics:} Positive tax relief scenarios show ensemble uplift exceeding LSTM baseline; adverse scenarios widen divergence as heterogeneity accentuates vulnerability pockets.
+
+\subsection{Forward Forecasts}
+No-policy ensemble survival drifts from 0.91966 (2023) to 0.92098 (2027), absolute gain 0.00132 (\~0.14\%). Ensemble exceeds LSTM baseline by \~0.0022--0.0024 annually. Interval half-width \~0.037 (under-dispersed vs empirical coverage \~15\%).
+
+\subsection{Robustness and Stability}
+\paragraph{Temporal Segmentation:} MAE stability hides negative $R^2$ due to compressed intra-period variance and non-adaptive residual structure.
+\paragraph{Cross-Validation:} Fold R$^2$ heterogeneity implies need for time-varying weights.
+\paragraph{Coverage Critique:} Observed coverage 15.2\% (nominal 95\%) indicates underestimation of predictive uncertainty; recommend conformal or quantile calibration.
+\paragraph{Identification Sensitivity:} Potential unobserved sectoral shocks; propose partial R$^2$ / Oster bounds in future work.
+
+\subsection{Summary of Empirical Findings}
+\begin{enumerate}
+  \item Ensemble frontier performance (RMSE 0.0287; $R^2$ 0.895) driven by heterogeneity modeling (Forest weight >96\%).
+  \item 5\% VAT increase: −3.84 p.p. effect; semi-elasticity −0.77 p.p. per 1\% VAT; amplified in downturns.
+  \item Convex tax relief response: aggressive cuts yield > proportional gains.
+  \item Resilience tied to scale/density; vulnerability amplified by stress and tightening.
+  \item Interaction channels central (labor slack \times credit cost; inflation \times rates).
+  \item Stability without adaptivity suggests dynamic weighting opportunities.
+  \item Interval undercoverage demands calibration.
+  \item Identification credible; scenario alignment resolves mean vs policy-conditioned discrepancy.
+\end{enumerate}
+

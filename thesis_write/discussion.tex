@@ -1,0 +1,71 @@
+% Discussion Section
+\section{Discussion}\label{sec:discussion}
+
+\subsection{Interpretation of Treatment Effects}
+Mechanistic channels underpinning the negative VAT impact:
+\begin{enumerate}
+  \item \textbf{Liquidity Compression}: Reduced net operating cash elevates insolvency threshold breach probability.
+  \item \textbf{Cost Pass-Through Frictions}: Incomplete pass-through under demand elasticity compresses margins (small firms disproportionately affected).
+  \item \textbf{Financing Cost Coupling}: Elevated interest rates restrict refinancing agility; interaction with unemployment heightens fragility.
+  \item \textbf{Demand Amplifiers}: Higher unemployment dampens revenue recovery, reinforcing attrition dynamics.
+\end{enumerate}
+Asymmetric relief responses (convexity) reflect discrete fixed cost and debt service thresholds: larger cuts more frequently reposition firms above viability margins compared to incremental adjustments.
+
+\subsection{Policy Implications}
+\begin{itemize}
+  \item \textbf{Timing Optimization}: Avoid procyclical VAT hikes during downturns; align increases with expansions.
+  \item \textbf{Targeted Transitional Instruments}: Liquidity bridges (credit guarantees, accelerated depreciation) for low size/density cohorts.
+  \item \textbf{Complementary Offsets}: Pair necessary VAT rises with payroll credits or capital allowances to neutralize net survival drag.
+  \item \textbf{Adaptive Triggers}: Macro-contingent clauses (automatic deferral under dual high unemployment + high rates).
+  \item \textbf{Scenario Stress Governance}: Integrate ensemble scenario metrics into fiscal risk dashboards.
+\end{itemize}
+
+\subsection{Comparative Framework Strengths}
+\begin{enumerate}
+  \item Bias-variance optimization through orthogonalization and ensemble blending.
+  \item Multi-resolution outputs: baseline forecasts, ATE, CATE distribution, scenario projections.
+  \item Mechanistic interpretability via feature and interaction importance.
+  \item Modular extensibility for additional policy levers.
+  \item Embedded diagnostic segmentation (stability, cross-validation) enabling proactive refinement.
+\end{enumerate}
+
+\subsection{Comparison to Traditional Econometric Benchmarks}
+Linear fixed-effects or DiD approaches impose additive separability and low-order interactions, obscuring multi-factor amplifiers (e.g., Unemployment$\times$InterestRate). Incidental parameter risk in short panels further weakens inference. Causal forest dominance in ensemble weighting supplies revealed evidence of non-linear, interaction-rich data generating structure. Double ML anchors unbiased average effect estimation; forest augments granularity—jointly superior to either paradigm alone.
+
+\subsection{Alignment with Economic Theory}
+\begin{enumerate}
+  \item \textbf{Financial Accelerator}: Credit channel amplification reflected in interaction salience.
+  \item \textbf{Real Options}: VAT hikes raise quasi-irreversible commitment burdens increasing exit option value.
+  \item \textbf{Agglomeration / Endogenous Growth}: Scale and density resilience mirror spillover buffering.
+  \item \textbf{Tax Incidence}: Partial pass-through constraints heighten margin compression for small firms.
+  \item \textbf{Countercyclical Stabilization}: Timing sensitivity validates avoiding contractionary shifts in recessions.
+\end{enumerate}
+
+\subsection{Limitations}
+\begin{enumerate}
+  \item Annual frequency obscures high-frequency transmission (inventory cycles, credit rollover shocks).
+  \item Sectoral heterogeneity not explicitly stratified (latent confounding risk).
+  \item Predictive interval undercoverage (observed 15.2\% vs nominal) overstates precision.
+  \item Static ensemble weighting lacks macro-conditional adaptivity.
+  \item Aggregation ambiguity between unconditional forest mean and scenario-conditioned ATE.
+  \item Absence of formal unobserved confounder sensitivity bounds.
+  \item No external (cross-country or sectoral) replication performed.
+\end{enumerate}
+
+\subsection{Future Extensions}
+\begin{center}
+\begin{tabular}{llll}
+\toprule
+Extension & Objective & Method & Benefit \\
+\midrule
+Dynamic Ensemble & Regime adaptivity & Macro-gated weights & Improved period $R^2$ \\
+Interval Calibration & Uncertainty realism & Split-conformal / quantile forests & Reliable coverage \\
+Sectoral Layering & Finer heterogeneity & Multi-task CATE & Targeted policy design \\
+Multi-Policy Modeling & Joint effects & Structural causal graph & Leverage mapping \\
+Mixed-Frequency Fusion & Resolution uplift & MIDAS / state-space & Early warning accuracy \\
+Sensitivity Analysis & Robustness quantification & Oster / partial $R^2$ / Rosenbaum & Credibility reinforcement \\
+Stress Simulation & Tail risk surfacing & Stochastic macro generator & Risk dashboard integration \\
+\bottomrule
+\end{tabular}
+\end{center}
+
