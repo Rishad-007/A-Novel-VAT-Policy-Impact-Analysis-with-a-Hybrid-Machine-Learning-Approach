@@ -1,0 +1,72 @@
+{
+  "experiment_date": "2025-10-06 19:43:59",
+  "original_variables": [
+    "GDP_Growth",
+    "Inflation",
+    "Unemployment",
+    "InterestRate",
+    "Real_Interest_Rate",
+    "tax_policy_treatment",
+    "policy_intensity"
+  ],
+  "variable_importance_ranking": [
+    "InterestRate",
+    "Real_Interest_Rate",
+    "Unemployment",
+    "policy_intensity",
+    "GDP_Growth",
+    "Inflation",
+    "tax_policy_treatment"
+  ],
+  "minimal_viable_set": [
+    "tax_policy_treatment",
+    "Unemployment"
+  ],
+  "performance_retention": 0.09140367631493973,
+  "vat_scenario_comparison": [
+    {
+      "vat_increase": 1.0,
+      "full_r2": -1.469342958114408,
+      "minimal_r2": -1.5255495844493139,
+      "performance_diff": -0.05620662633490592
+    },
+    {
+      "vat_increase": 2.5,
+      "full_r2": -1.4402679692081612,
+      "minimal_r2": -1.469959215623811,
+      "performance_diff": -0.029691246415649797
+    },
+    {
+      "vat_increase": 5.0,
+      "full_r2": -1.4251972742273364,
+      "minimal_r2": -1.4604541865713068,
+      "performance_diff": -0.035256912343970326
+    },
+    {
+      "vat_increase": 7.5,
+      "full_r2": -1.428920347690775,
+      "minimal_r2": -1.4785104705170493,
+      "performance_diff": -0.049590122826274285
+    },
+    {
+      "vat_increase": 10.0,
+      "full_r2": -1.4142889017198146,
+      "minimal_r2": -1.467572067830458,
+      "performance_diff": -0.05328316611064343
+    }
+  ],
+  "recommendations": {
+    "priority_variables": [
+      "InterestRate",
+      "Real_Interest_Rate"
+    ],
+    "removable_variables": [
+      "Inflation",
+      "tax_policy_treatment"
+    ],
+    "minimal_set": [
+      "tax_policy_treatment",
+      "Unemployment"
+    ]
+  }
+}
