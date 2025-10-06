@@ -1,0 +1,153 @@
+{
+  "thesis_title": "Hybrid Economic Policy Analysis using Machine Learning and Causal Inference",
+  "inventory_date": "2025-10-06 19:23:28",
+  "total_unique_variables": 13,
+  "primary_dataset_variables": {
+    "CPI": {
+      "type": "float64",
+      "description": "Consumer Price Index (All Urban Consumers)",
+      "min_value": 64.8,
+      "max_value": 291.01075,
+      "mean_value": 173.19408333333337
+    },
+    "GDP": {
+      "type": "float64",
+      "description": "Real Gross Domestic Product (Billions $)",
+      "min_value": 7052.71125,
+      "max_value": 22034.82875,
+      "mean_value": 13722.658599999999
+    },
+    "GDP_Growth": {
+      "type": "float64",
+      "description": "GDP Growth Rate (%)",
+      "min_value": -0.6364051762253853,
+      "max_value": 1.9196119730573449,
+      "mean_value": 0.669008275159127
+    },
+    "Inflation": {
+      "type": "float64",
+      "description": "Inflation Rate (CPI-based, %)",
+      "min_value": -0.0470036982444882,
+      "max_value": 3.021271389490315,
+      "mean_value": 0.8829806270326226
+    },
+    "InterestRate": {
+      "type": "float64",
+      "description": "Federal Funds Rate (%)",
+      "min_value": 0.0849999999999999,
+      "max_value": 17.23,
+      "mean_value": 4.6445
+    },
+    "Real_Interest_Rate": {
+      "type": "float64",
+      "description": "Real Interest Rate (nominal - inflation)",
+      "min_value": -1.4373722871678225,
+      "max_value": 14.754850407725815,
+      "mean_value": 3.761519372967378
+    },
+    "Unemployment": {
+      "type": "float64",
+      "description": "Unemployment Rate (%)",
+      "min_value": 3.7,
+      "max_value": 9.7,
+      "mean_value": 6.183888888888888
+    },
+    "firmdeath_firms": {
+      "type": "int64",
+      "description": "Number of firm deaths",
+      "min_value": 326342.0,
+      "max_value": 511486.0,
+      "mean_value": 413102.3777777778
+    },
+    "firms": {
+      "type": "int64",
+      "description": "Total number of firms",
+      "min_value": 3558681.0,
+      "max_value": 5535295.0,
+      "mean_value": 4718494.088888889
+    },
+    "policy_intensity": {
+      "type": "float64",
+      "description": "Policy intensity measure",
+      "min_value": 0.0,
+      "max_value": 1.01059046253456,
+      "mean_value": 0.11182961722398832
+    },
+    "survival_rate": {
+      "type": "float64",
+      "description": "Firm survival rate (1 - death_rate)",
+      "min_value": 0.891412009476735,
+      "max_value": 0.9260373631698886,
+      "mean_value": 0.911710626820348
+    },
+    "tax_policy_treatment": {
+      "type": "int64",
+      "description": "Tax policy treatment (-1=increase, 0=normal, 1=cut)",
+      "min_value": -1.0,
+      "max_value": 1.0,
+      "mean_value": 0.022222222222222223
+    },
+    "year": {
+      "type": "int64",
+      "description": "Observation year",
+      "min_value": 1978.0,
+      "max_value": 2022.0,
+      "mean_value": 2000.0
+    }
+  },
+  "model_usage": {
+    "lstm_variables": [
+      "GDP_Growth",
+      "Inflation",
+      "Unemployment",
+      "InterestRate",
+      "survival_rate"
+    ],
+    "dml_variables": [
+      "tax_policy_treatment",
+      "survival_rate",
+      "GDP_Growth",
+      "Inflation",
+      "Unemployment",
+      "InterestRate"
+    ],
+    "causal_forest_variables": [
+      "tax_policy_treatment",
+      "survival_rate",
+      "GDP_Growth",
+      "Inflation",
+      "Unemployment",
+      "InterestRate",
+      "policy_intensity"
+    ],
+    "all_model_variables": [
+      "policy_intensity",
+      "GDP_Growth",
+      "Unemployment",
+      "survival_rate",
+      "tax_policy_treatment",
+      "Inflation",
+      "InterestRate"
+    ]
+  },
+  "data_sources": {
+    "FRED_variables": [
+      "GDP",
+      "CPI",
+      "Unemployment",
+      "InterestRate"
+    ],
+    "Census_variables": [
+      "firms",
+      "firmdeath_firms"
+    ],
+    "derived_variables": [
+      "GDP_Growth",
+      "Inflation",
+      "Real_Interest_Rate",
+      "survival_rate",
+      "tax_policy_treatment",
+      "policy_intensity"
+    ]
+  }
+}

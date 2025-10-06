@@ -1,0 +1,15 @@
+{
+  "year": "Observation year",
+  "survival_rate": "Firm survival rate (1 - death_rate)",
+  "firms": "Total number of firms",
+  "firmdeath_firms": "Number of firm deaths",
+  "GDP": "Real Gross Domestic Product (Billions $)",
+  "CPI": "Consumer Price Index (All Urban Consumers)",
+  "Unemployment": "Unemployment Rate (%)",
+  "InterestRate": "Federal Funds Rate (%)",
+  "GDP_Growth": "GDP Growth Rate (%)",
+  "Inflation": "Inflation Rate (CPI-based, %)",
+  "Real_Interest_Rate": "Real Interest Rate (nominal - inflation)",
+  "tax_policy_treatment": "Tax policy treatment (-1=increase, 0=normal, 1=cut)",
+  "policy_intensity": "Policy intensity measure"
+}

@@ -2,7 +2,7 @@
         HYBRID ECONOMIC POLICY ANALYSIS - EXECUTIVE SUMMARY
         =====================================================
 
-        Analysis Date: 2025-09-17
+        Analysis Date: 2025-10-06
 
         DATA SOURCES:
         - Federal Reserve Economic Data (FRED) API
@@ -18,11 +18,11 @@
         - Hybrid Ensemble for robust policy analysis
 
         KEY FINDINGS:
-        - LSTM Performance: Final training loss: 0.029338
+        - LSTM Performance: Final training loss: 0.034277
         - Average Treatment Effect (DML): -0.038398
         - DML Confidence Interval: [-0.075808, -0.000988]
         - Causal Forest Mean Effect: 0.002458
-        - Ensemble Weights: {'lstm': 0.034834063891440996, 'dml': 0.004672105027266059, 'causal_forest': 0.9604938310812929}
+        - Ensemble Weights: {'lstm': 0.014433250633650146, 'dml': 0.004770859799493455, 'causal_forest': 0.9807958895668564}
 
         DATA VERIFICATION:
         ✅ All data sources confirmed as real economic data

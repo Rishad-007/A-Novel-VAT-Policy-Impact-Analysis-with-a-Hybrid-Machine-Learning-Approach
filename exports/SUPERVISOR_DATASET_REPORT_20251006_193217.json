@@ -1,0 +1,43 @@
+{
+  "thesis_title": "Hybrid Economic Policy Analysis using Machine Learning and Causal Inference",
+  "dataset_creation_date": "2025-10-06 19:32:17",
+  "total_observations": 45,
+  "total_variables": 18,
+  "time_period": "1978-2022",
+  "data_sources": {
+    "FRED_Economic_Data": [
+      "GDP",
+      "CPI",
+      "Unemployment",
+      "Interest_Rates"
+    ],
+    "Census_Business_Data": [
+      "Firm_Survival",
+      "Business_Dynamics"
+    ],
+    "Policy_Variables": [
+      "Tax_Policy_Treatment",
+      "Policy_Intensity"
+    ]
+  },
+  "models_implemented": [
+    "LSTM_Forecasting",
+    "Double_Machine_Learning",
+    "Causal_Forest"
+  ],
+  "key_findings_variables": {
+    "dependent_variable": "survival_rate",
+    "main_treatment": "tax_policy_treatment",
+    "key_controls": [
+      "GDP_Growth",
+      "Inflation",
+      "Unemployment",
+      "InterestRate"
+    ],
+    "policy_intensity": "policy_intensity"
+  },
+  "data_quality": {
+    "missing_values": 0,
+    "completeness_rate": "100.0%"
+  }
+}
